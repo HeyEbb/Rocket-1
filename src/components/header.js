@@ -13,9 +13,7 @@ export default function Header() {
         <Link to="/">
           <div className="logoContainer">
             <img src={Logo} alt="Logo" />
-            <div className="subLogo">
-              <h3>MISSION CONTROL</h3>
-            </div>
+            <div className="subLogo">MISSION CONTROL</div>
           </div>
         </Link>
       </div>

@@ -100,6 +100,11 @@ p {
   align-items: center;
   justify-content: center;
   border-left: 2px solid white;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400 !important;
+  color: white;
+  font-size: 20px !important;
+  margin: 0 !important;
 }
 
 .titleContainer {
@@ -194,5 +199,16 @@ p {
 
   .subpageHeader {
     padding: 120px 100px 0px 50px;
+  }
+  .header {
+    width: 100% !important;
+  }
+
+  .logoContainer {
+    width: 100%;
+  }
+
+  .subLogo {
+    font-size: 15px!important;
   }
 }
