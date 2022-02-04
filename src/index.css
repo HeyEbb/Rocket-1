@@ -1,13 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;800&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+  color: white !important;
+  text-decoration: none !important; /* no underline */
+}
+
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 100px !important;
+  font-weight: 500;
+  margin: 0px !important;
+}
+
+h2 {
+  font-weight: 600 !important;
+  font-family: "Outfit", sans-serif;
+}
+
+h3 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400 !important;
+  margin: 0;
+  color: white;
+  font-size: 20px !important;
+  margin: 0 !important;
+}
+
+p {
+  font-size: 16px;
+}
+
+.homeHero {
+  background-color: black;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  height: 100px;
+  position: fixed;
+  top: 0;
+}
+
+.logoContainer {
+  /* background-color: green; */
+  width: 500px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subLogo {
+  /* background-color: aqua; */
+  height: 50%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid white;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+}
+
+.titleText {
+  color: white;
+}
+
+.subTitleText {
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+}
+
+.categoryHero {
+  background-color: black;
+  padding: 5% 10% 5% 10%;
+}
+
+/* cards */
+
+.listingContainer {
+  background-color: black;
+  padding: 8%;
+  color: white;
+}
+
+.cardCategory {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.cardContainer {
+  width: 100%;
+  height: 450px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+/* rocket cards */
+
+.cardHolder {
+  background-color: aquamarine;
+  width: 100%;
+  height: 200px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.subpageHeader {
+  background-color: black;
+  color: white;
+  padding: 120px 100px 0px 100px;
 }
