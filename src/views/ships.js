@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
-import ReactDOM, { render } from "react-dom";
-// importing images
-import Logo from "../images/spaceXlogo.png";
-import HomeHero from "../images/homeHero.png";
+
+// importing packages
 import axios from "axios";
-
-import Header from "../components/header";
-import SubpageHeader from "../components/subpageHeader";
-
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
 import { Col, Row } from "react-bootstrap";
+
+// importing components
+import SubpageHeader from "../components/subpageHeader";
+import Header from "../components/header";
 
 export default function Ships() {
   const [rocket, setRocket] = useState(null);
@@ -18,8 +14,7 @@ export default function Ships() {
   useEffect(() => {
     axios
       .get("https://api.spacexdata.com/v3/ships")
-      .then((response) => setRocket(response.data))
-      .then(console.log(rocket));
+      .then((response) => setRocket(response.data));
   }, []);
 
   return (
@@ -34,14 +29,14 @@ export default function Ships() {
                 <>
                   <Col xl={3}>
                     <div className="cardContainer">
-                      <div className="book" key={index}>
+                      <div key={index}>
                         <h2>{ship.ship_name}</h2>
                         <img
                           className="cardImage"
                           src={ship.image}
                           onError={({ currentTarget }) => {
-                            currentTarget.onerror = null; // prevents looping
-                            currentTarget.src = {Logo};
+                            currentTarget.onerror = null;
+                            currentTarget.src = "../images/spaceXlogo.png";
                           }}
                           alt="new"
                         />

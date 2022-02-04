@@ -1,24 +1,21 @@
 import React, { useState } from "react";
-import ReactDOM, { render } from "react-dom";
-// importing paackages
+
+// importing packages
 import { Animated } from "react-animated-css";
+import Tilty from "react-tilty";
+import { Col, Row } from "react-bootstrap";
+import { BrowserRouter as Link } from "react-router-dom";
 
 // importing images
-import Logo from "../images/spaceXlogo.png";
 import HomeHero from "../images/homeHero.png";
 import RocketThumb from "../images/rocketThumb.png";
 import DragonThumb from "../images/dragonThumb.png";
 import ShipThumb from "../images/shipThumb.png";
+
 // importing components
 import Header from "../components/header";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
-import { Col, Row } from "react-bootstrap";
-
 export default function Home() {
-  const [rocket, setRocket] = useState(null);
-
   return (
     <>
       <div
@@ -34,7 +31,11 @@ export default function Home() {
               <h1>Ready for liftoff?</h1>
             </Animated>
           </div>
-          <Animated animationIn="fadeIn" isVisible={true} animationInDelay={500}>
+          <Animated
+            animationIn="fadeIn"
+            isVisible={true}
+            animationInDelay={500}
+          >
             <p className="subTitleText">
               Our brand new mission control app gives you access to all of the
               SpaceX data you’ll ever need.
@@ -45,34 +46,46 @@ export default function Home() {
       <div className="categoryHero">
         <Row>
           <Col xl={3}>
-            <div
-              className="cardCategory"
-              style={{
-                backgroundImage: `url(${RocketThumb})`,
-              }}
-            >
-              <Link to="/rocket">Rockets</Link>
-            </div>
+            <Tilty scale={1.1}>
+              <Link to="/rocket">
+                <div
+                  className="cardCategory"
+                  style={{
+                    backgroundImage: `url(${RocketThumb})`,
+                  }}
+                >
+                  Rockets
+                </div>
+              </Link>
+            </Tilty>
           </Col>
           <Col xl={3}>
-            <div
-              className="cardCategory"
-              style={{
-                backgroundImage: `url(${DragonThumb})`,
-              }}
-            >
-              <Link to="/dragons">Dragons</Link>
-            </div>
+            <Tilty scale={1.1}>
+              <Link to="/dragons">
+                <div
+                  className="cardCategory"
+                  style={{
+                    backgroundImage: `url(${DragonThumb})`,
+                  }}
+                >
+                  Dragons
+                </div>
+              </Link>
+            </Tilty>
           </Col>
           <Col xl={3}>
-            <div
-              className="cardCategory"
-              style={{
-                backgroundImage: `url(${ShipThumb})`,
-              }}
-            >
-              <Link to="/ships">Ships</Link>
-            </div>
+            <Tilty scale={1.1}>
+              <Link to="/ships">
+                <div
+                  className="cardCategory"
+                  style={{
+                    backgroundImage: `url(${ShipThumb})`,
+                  }}
+                >
+                  Ships
+                </div>
+              </Link>
+            </Tilty>
           </Col>
         </Row>
       </div>

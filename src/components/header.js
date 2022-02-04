@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // importing images
 import Logo from "../images/spaceXlogo.png";
