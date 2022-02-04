@@ -34,11 +34,7 @@ export default function Ships() {
                         <img
                           className="cardImage"
                           src={ship.image}
-                          onError={({ currentTarget }) => {
-                            currentTarget.onerror = null;
-                            currentTarget.src = "../images/spaceXlogo.png";
-                          }}
-                          alt="new"
+                          alt={ship.ship_name}
                         />
                         <h3>Home port: {ship.home_port}</h3>
                         <h3>Year built: {ship.year_built}</h3>

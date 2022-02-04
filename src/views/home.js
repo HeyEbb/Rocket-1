@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import { Animated } from "react-animated-css";
 import Tilty from "react-tilty";
 import { Col, Row } from "react-bootstrap";
-import { BrowserRouter as Link } from "react-router-dom";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // importing images
 import HomeHero from "../images/homeHero.png";
 import RocketThumb from "../images/rocketThumb.png";
